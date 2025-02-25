@@ -1,0 +1,158 @@
+.title {
+    position: fixed;
+    left: 97px;
+    top: 35px;
+    z-index: 100;
+    color: #fff;
+    opacity: 0;
+    transition: 1s;
+
+    @media (max-width:400px) {
+        top: 22px;
+        left: 22px;
+    }
+}
+
+.humburger {
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    z-index: 100;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    transition: 1s;
+
+    &__component {
+        width: 25px;
+        height: 2px;
+        display: block;
+        background-color: white;
+        border-radius: 8px;
+        transition: 1s;
+
+        &_margin-bottom {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position:fixed ;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    color: #fff;
+    transform: translateY(-100%);
+    transition: 1s;
+    opacity: 0;
+
+    &__content {
+        padding-top: 90px;
+        text-align: center;
+
+    }
+
+    &__content-unit {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+}
+
+.sidebar {
+    display: flex;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+    color: #fff;
+    z-index: 98;
+    opacity: 0;
+    transition: 1s;
+
+    &__component {
+        display: inline-block;
+        border: 1px #fff solid;
+        padding: 8px 10px;
+    }
+}
+
+.secTitle {
+    display: inline-block;
+    font-size: 60px;
+    margin-bottom: 45px;
+    letter-spacing: 1.8px;
+    border-bottom: solid 1px ;
+    color: #fff;
+
+    @media (max-width:400px) {
+        font-size: 32px;
+        letter-spacing: 0.96px;
+    }
+}
+
+.button {
+    display: block;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_right-line {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width:120px ;
+            height: 1px;
+            background-color: #fff;
+            top: 50%;
+            right: -30px;
+
+            @media (max-width:400px) {
+                display: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 1px;
+            background-color: #fff;
+            transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0);
+            top: 45.5%;
+            right: -32px;
+
+            @media (max-width:400px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.opacity {
+    opacity: 1;
+    transform: none;
+}
+
+.opacityOnly {
+    opacity: 1;
+}
+
+.rotate {
+    transform: translateY(6px) rotate(-405deg);
+}
+
+.none {
+    opacity: 0;
+}
+
+.rotate2 {
+    transform: translateY(-6px) rotate(405deg);
+}

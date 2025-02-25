@@ -1,0 +1,19 @@
+$black:#050507;
+$white:#FFFFFF;
+$gray:#CCCCCC;
+
+$sp:400px;
+$tablet:769px;
+
+@mixin phone {
+    @media (max-width:$sp) {
+        @content
+    }
+}
+
+
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content
+    }
+}
